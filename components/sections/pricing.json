@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_pricings",
+  "info": {
+    "name": "Pricing",
+    "icon": "dollar-sign",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.service",
+      "required": true
+    },
+    "pricePerUser": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    }
+  }
+}

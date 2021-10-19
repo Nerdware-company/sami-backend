@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_useful_ticket_replies",
+  "info": {
+    "name": "ticketReply",
+    "icon": "reply",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isAdmin": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "message": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 5
+    },
+    "replyDate": {
+      "required": true,
+      "type": "datetime"
+    }
+  }
+}

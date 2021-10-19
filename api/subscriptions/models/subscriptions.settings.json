@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "name": "Subscriptions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "services": {
+      "collection": "services"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false,
+      "required": true,
+      "pluginOptions": {}
+    },
+    "user": {
+      "via": "subscriptions",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "paymentRecurrence": {
+      "type": "enumeration",
+      "enum": [
+        "MONTHLY",
+        "YEARLY"
+      ],
+      "default": "MONTHLY",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "subdomain": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 100,
+      "pluginOptions": {}
+    },
+    "coupon_code": {
+      "model": "coupons"
+    },
+    "subtotal": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01,
+      "pluginOptions": {}
+    },
+    "discount": {
+      "type": "biginteger",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "total": {
+      "type": "decimal",
+      "min": 0.01,
+      "required": true,
+      "pluginOptions": {}
+    },
+    "numberOfUsers": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "pluginOptions": {}
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_elements_ftags",
+  "info": {
+    "name": "ftag",
+    "icon": "tags"
+  },
+  "options": {},
+  "attributes": {
+    "tname": {
+      "type": "string"
+    }
+  }
+}

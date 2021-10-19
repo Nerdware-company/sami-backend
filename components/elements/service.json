@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_elements_services",
+  "info": {
+    "name": "service",
+    "icon": "tag",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "monthlyPrice": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    },
+    "yearlyPrice": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}
