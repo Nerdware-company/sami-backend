@@ -517,16 +517,50 @@
       "Subscriptions": {
         "required": [
           "id",
-          "active",
-          "paymentRecurrence",
+          "title",
           "subdomain",
-          "subtotal",
+          "numberOfUsers",
+          "paymentRecurrence",
+          "subTotal",
           "total",
-          "numberOfUsers"
+          "active"
         ],
         "properties": {
           "id": {
             "type": "string"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 2
+          },
+          "subdomain": {
+            "type": "string",
+            "minLength": 3
+          },
+          "numberOfUsers": {
+            "type": "integer",
+            "default": 1
+          },
+          "paymentRecurrence": {
+            "type": "string",
+            "default": "monthly",
+            "enum": [
+              "monthly",
+              "yearly"
+            ]
+          },
+          "subTotal": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "integer"
+          },
+          "active": {
+            "type": "boolean",
+            "default": true
           },
           "services": {
             "type": "array",
@@ -575,11 +609,41 @@
               }
             }
           },
-          "active": {
-            "type": "boolean",
-            "default": false
+          "coupon": {
+            "required": [
+              "id",
+              "discountPercentage",
+              "active",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "discountPercentage": {
+                "type": "integer"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "code": {
+                "type": "string"
+              },
+              "usageTImes": {
+                "type": "integer"
+              },
+              "validUntil": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
-          "user": {
+          "owner": {
             "required": [
               "id",
               "username",
@@ -617,59 +681,80 @@
               "role": {
                 "type": "string"
               },
-              "subscriptions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "accountType": {
+                "type": "string",
+                "enum": [
+                  "customer",
+                  "partner",
+                  "accountant",
+                  "support"
+                ]
+              },
+              "partner": {
+                "type": "string"
+              },
+              "picture": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "partner": {
+            "required": [
+              "id",
+              "username",
+              "email",
+              "accountType"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
               },
               "accountType": {
                 "type": "string",
                 "enum": [
                   "customer",
                   "partner",
-                  "accountant"
+                  "accountant",
+                  "support"
                 ]
               },
-              "created_by": {
+              "partner": {
                 "type": "string"
               },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "paymentRecurrence": {
-            "type": "string",
-            "default": "MONTHLY",
-            "enum": [
-              "MONTHLY",
-              "YEARLY"
-            ]
-          },
-          "subdomain": {
-            "type": "string",
-            "maxLength": 100,
-            "minLength": 1
-          },
-          "coupon_code": {
-            "required": [
-              "id",
-              "discountPercentage",
-              "active",
-              "code"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "discountPercentage": {
-                "type": "integer"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "code": {
+              "picture": {
                 "type": "string"
               },
               "created_by": {
@@ -679,71 +764,67 @@
                 "type": "string"
               }
             }
-          },
-          "subtotal": {
-            "type": "number"
-          },
-          "discount": {
-            "type": "integer"
-          },
-          "total": {
-            "type": "number"
-          },
-          "numberOfUsers": {
-            "type": "integer"
           }
         }
       },
       "NewSubscriptions": {
         "required": [
-          "active",
-          "paymentRecurrence",
+          "title",
           "subdomain",
-          "subtotal",
+          "numberOfUsers",
+          "paymentRecurrence",
+          "subTotal",
           "total",
-          "numberOfUsers"
+          "active"
         ],
         "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 2
+          },
+          "subdomain": {
+            "type": "string",
+            "minLength": 3
+          },
+          "numberOfUsers": {
+            "type": "integer",
+            "default": 1
+          },
+          "paymentRecurrence": {
+            "type": "string",
+            "default": "monthly",
+            "enum": [
+              "monthly",
+              "yearly"
+            ]
+          },
+          "subTotal": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "discount": {
+            "type": "integer"
+          },
+          "active": {
+            "type": "boolean",
+            "default": true
+          },
           "services": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "active": {
-            "type": "boolean",
-            "default": false
-          },
-          "user": {
+          "coupon": {
             "type": "string"
           },
-          "paymentRecurrence": {
-            "type": "string",
-            "default": "MONTHLY",
-            "enum": [
-              "MONTHLY",
-              "YEARLY"
-            ]
-          },
-          "subdomain": {
-            "type": "string",
-            "maxLength": 100,
-            "minLength": 1
-          },
-          "coupon_code": {
+          "owner": {
             "type": "string"
           },
-          "subtotal": {
-            "type": "number"
-          },
-          "discount": {
-            "type": "integer"
-          },
-          "total": {
-            "type": "number"
-          },
-          "numberOfUsers": {
-            "type": "integer"
+          "partner": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

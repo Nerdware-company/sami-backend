@@ -562,19 +562,20 @@
                 "role": {
                   "type": "string"
                 },
-                "subscriptions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
                 "accountType": {
                   "type": "string",
                   "enum": [
                     "customer",
                     "partner",
-                    "accountant"
+                    "accountant",
+                    "support"
                   ]
+                },
+                "partner": {
+                  "type": "string"
+                },
+                "picture": {
+                  "type": "string"
                 },
                 "created_by": {
                   "type": "string"

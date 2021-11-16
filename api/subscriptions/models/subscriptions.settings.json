@@ -12,62 +12,64 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "services": {
-      "collection": "services"
-    },
-    "active": {
-      "type": "boolean",
-      "default": false,
+    "title": {
+      "type": "string",
       "required": true,
-      "pluginOptions": {}
-    },
-    "user": {
-      "via": "subscriptions",
-      "plugin": "users-permissions",
-      "model": "user"
-    },
-    "paymentRecurrence": {
-      "type": "enumeration",
-      "enum": [
-        "MONTHLY",
-        "YEARLY"
-      ],
-      "default": "MONTHLY",
-      "required": true,
-      "pluginOptions": {}
+      "minLength": 2
     },
     "subdomain": {
       "type": "string",
       "required": true,
-      "minLength": 1,
-      "maxLength": 100,
-      "pluginOptions": {}
-    },
-    "coupon_code": {
-      "model": "coupons"
-    },
-    "subtotal": {
-      "type": "decimal",
-      "required": true,
-      "min": 0.01,
-      "pluginOptions": {}
-    },
-    "discount": {
-      "type": "biginteger",
-      "required": false,
-      "pluginOptions": {}
-    },
-    "total": {
-      "type": "decimal",
-      "min": 0.01,
-      "required": true,
-      "pluginOptions": {}
+      "minLength": 3
     },
     "numberOfUsers": {
       "type": "integer",
       "required": true,
       "min": 1,
-      "pluginOptions": {}
+      "default": 1
+    },
+    "paymentRecurrence": {
+      "type": "enumeration",
+      "enum": [
+        "monthly",
+        "yearly"
+      ],
+      "required": true,
+      "default": "monthly"
+    },
+    "subTotal": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    },
+    "total": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    },
+    "discount": {
+      "type": "integer",
+      "required": false,
+      "min": 1
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "services": {
+      "collection": "services"
+    },
+    "coupon": {
+      "model": "coupons"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "partner": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

@@ -59,19 +59,30 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "subscriptions": {
-      "via": "user",
-      "collection": "subscriptions"
-    },
     "accountType": {
       "type": "enumeration",
       "enum": [
         "customer",
         "partner",
-        "accountant"
+        "accountant",
+        "support"
       ],
       "required": true,
       "default": "customer"
+    },
+    "partner": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

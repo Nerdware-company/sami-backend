@@ -537,6 +537,13 @@
             "type": "string",
             "maxLength": 14,
             "minLength": 4
+          },
+          "usageTImes": {
+            "type": "integer"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
@@ -559,6 +566,13 @@
             "type": "string",
             "maxLength": 14,
             "minLength": 4
+          },
+          "usageTImes": {
+            "type": "integer"
+          },
+          "validUntil": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

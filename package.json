@@ -7,10 +7,12 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "gcp-build": "strapi build"
   },
   "devDependencies": {},
   "dependencies": {
+    "@tinymce/tinymce-react": "^3.13.0",
     "knex": "0.21.18",
     "pg": "^8.7.1",
     "sqlite3": "5.0.0",

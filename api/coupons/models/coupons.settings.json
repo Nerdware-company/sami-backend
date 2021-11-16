@@ -30,6 +30,12 @@
       "unique": true,
       "maxLength": 14,
       "minLength": 4
+    },
+    "usageTImes": {
+      "type": "integer"
+    },
+    "validUntil": {
+      "type": "datetime"
     }
   }
 }
