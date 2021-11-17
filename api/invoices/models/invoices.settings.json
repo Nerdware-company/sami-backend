@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "name": "invoices",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subscription": {
+      "model": "subscriptions"
+    },
+    "subTotal": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "discount": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "paid"
+      ]
+    },
+    "paymentType": {
+      "type": "enumeration",
+      "enum": [
+        "creditcard",
+        "cryptocurrency",
+        "banktransfer"
+      ]
+    },
+    "paidDate": {
+      "type": "datetime"
+    }
+  }
+}

@@ -70,6 +70,10 @@
     "partner": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "expires_at": {
+      "type": "datetime",
+      "required": false
     }
   }
 }
