@@ -22,12 +22,16 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": true,
+      "pluginOptions": {}
     },
     "link": {
       "type": "component",
       "repeatable": false,
       "component": "links.link"
+    },
+    "idRef": {
+      "type": "string"
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_feature_grid_groups",
+  "info": {
+    "name": "FeatureGridGroup",
+    "icon": "grip-horizontal",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-grid-item"
+    }
+  }
+}

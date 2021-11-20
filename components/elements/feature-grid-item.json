@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_elements_feature_grid_items",
+  "info": {
+    "name": "FeatureGridItem",
+    "icon": "dot-circle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

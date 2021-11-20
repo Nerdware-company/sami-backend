@@ -46,7 +46,9 @@
         "sections.large-video",
         "sections.rich-text",
         "sections.pricing",
-        "sections.lead-form"
+        "sections.lead-form",
+        "sections.feature-grid-group",
+        "sections.feature-carousel-group"
       ],
       "pluginOptions": {
         "i18n": {

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sections_feature_carousel_groups",
+  "info": {
+    "name": "FeatureCarouselGroup",
+    "icon": "sliders-h",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature-carousel-item"
+    }
+  }
+}
