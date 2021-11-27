@@ -48,7 +48,8 @@
         "sections.pricing",
         "sections.lead-form",
         "sections.feature-grid-group",
-        "sections.feature-carousel-group"
+        "sections.feature-carousel-group",
+        "sections.picture-carousel-group"
       ],
       "pluginOptions": {
         "i18n": {
