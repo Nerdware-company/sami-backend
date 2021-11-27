@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_picture_carousel_groups",
+  "info": {
+    "name": "PictureCarouselGroup",
+    "icon": "images"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "pictures": {
+      "type": "component",
+      "repeatable": true,
+      "required": true,
+      "component": "elements.picture-carousel-item"
+    }
+  }
+}

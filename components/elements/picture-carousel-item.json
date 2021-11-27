@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_elements_picture_carousel_items",
+  "info": {
+    "name": "PictureCarouselItem",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}
