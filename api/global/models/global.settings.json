@@ -78,6 +78,26 @@
           "localized": true
         }
       }
+    },
+    "ClientArea": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "layout.client-area"
+    },
+    "Dashboard": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "layout.dashboard"
     }
   }
 }

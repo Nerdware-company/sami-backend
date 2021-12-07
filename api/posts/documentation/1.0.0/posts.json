@@ -519,7 +519,8 @@
           "id",
           "subject",
           "content",
-          "picture"
+          "picture",
+          "slug"
         ],
         "properties": {
           "id": {
@@ -600,6 +601,9 @@
               }
             }
           },
+          "slug": {
+            "type": "string"
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -607,7 +611,8 @@
                 "id",
                 "subject",
                 "content",
-                "picture"
+                "picture",
+                "slug"
               ],
               "properties": {
                 "id": {
@@ -620,6 +625,9 @@
                   "type": "string"
                 },
                 "picture": {
+                  "type": "string"
+                },
+                "slug": {
                   "type": "string"
                 },
                 "localizations": {
@@ -655,7 +663,8 @@
       "NewPosts": {
         "required": [
           "subject",
-          "content"
+          "content",
+          "slug"
         ],
         "properties": {
           "subject": {
@@ -665,6 +674,9 @@
           "content": {
             "type": "string",
             "minLength": 5
+          },
+          "slug": {
+            "type": "string"
           },
           "localizations": {
             "type": "array",

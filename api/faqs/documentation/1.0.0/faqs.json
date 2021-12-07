@@ -532,23 +532,6 @@
             "type": "string",
             "minLength": 3
           },
-          "ftag": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "tname": {
-                  "type": "string"
-                }
-              }
-            }
-          },
           "localizations": {
             "type": "array",
             "items": {
@@ -566,9 +549,6 @@
                 },
                 "content": {
                   "type": "string"
-                },
-                "ftag": {
-                  "type": "component"
                 },
                 "localizations": {
                   "type": "array",
@@ -613,23 +593,6 @@
           "content": {
             "type": "string",
             "minLength": 3
-          },
-          "ftag": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "tname": {
-                  "type": "string"
-                }
-              }
-            }
           },
           "localizations": {
             "type": "array",

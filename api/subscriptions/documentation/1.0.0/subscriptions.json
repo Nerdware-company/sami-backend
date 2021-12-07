@@ -520,7 +520,6 @@
           "title",
           "subdomain",
           "numberOfUsers",
-          "paymentRecurrence",
           "subTotal",
           "total",
           "active"
@@ -541,14 +540,6 @@
             "type": "integer",
             "default": 1
           },
-          "paymentRecurrence": {
-            "type": "string",
-            "default": "monthly",
-            "enum": [
-              "monthly",
-              "yearly"
-            ]
-          },
           "subTotal": {
             "type": "number"
           },
@@ -560,7 +551,7 @@
           },
           "active": {
             "type": "boolean",
-            "default": true
+            "default": false
           },
           "services": {
             "type": "array",
@@ -570,7 +561,8 @@
                 "title",
                 "monthlyPrice",
                 "yearlyPrice",
-                "picture"
+                "picture",
+                "service_code"
               ],
               "properties": {
                 "id": {
@@ -591,6 +583,9 @@
                 "picture": {
                   "type": "string"
                 },
+                "service_code": {
+                  "type": "string"
+                },
                 "localizations": {
                   "type": "array",
                   "items": {
@@ -609,52 +604,25 @@
               }
             }
           },
-          "coupon": {
-            "required": [
-              "id",
-              "discountPercentage",
-              "active",
-              "code"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "discountPercentage": {
-                "type": "integer"
-              },
-              "active": {
-                "type": "boolean"
-              },
-              "code": {
-                "type": "string"
-              },
-              "usageTImes": {
-                "type": "integer"
-              },
-              "validUntil": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "owner": {
             "required": [
               "id",
-              "username",
+              "firstname",
+              "lastname",
               "email",
-              "accountType"
+              "confirmed",
+              "accountType",
+              "phoneNumber",
+              "active"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "email": {
@@ -695,6 +663,12 @@
               },
               "picture": {
                 "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -707,15 +681,22 @@
           "partner": {
             "required": [
               "id",
-              "username",
+              "firstname",
+              "lastname",
               "email",
-              "accountType"
+              "confirmed",
+              "accountType",
+              "phoneNumber",
+              "active"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "email": {
@@ -757,6 +738,12 @@
               "picture": {
                 "type": "string"
               },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -765,9 +752,67 @@
               }
             }
           },
-          "expires_at": {
+          "invoices": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "subTotal": {
+                  "type": "number"
+                },
+                "total": {
+                  "type": "number"
+                },
+                "discount": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "pending",
+                    "paid"
+                  ]
+                },
+                "paymentType": {
+                  "type": "string",
+                  "enum": [
+                    "creditcard",
+                    "cryptocurrency",
+                    "banktransfer"
+                  ]
+                },
+                "paidDate": {
+                  "type": "string"
+                },
+                "subscription": {
+                  "type": "string"
+                },
+                "tap_id": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "coupon": {
+            "type": "string"
+          },
+          "paymentRecurrence": {
             "type": "string",
-            "format": "date-time"
+            "enum": [
+              "MONTHLY",
+              "YEARLY"
+            ]
           }
         }
       },
@@ -776,7 +821,6 @@
           "title",
           "subdomain",
           "numberOfUsers",
-          "paymentRecurrence",
           "subTotal",
           "total",
           "active"
@@ -794,14 +838,6 @@
             "type": "integer",
             "default": 1
           },
-          "paymentRecurrence": {
-            "type": "string",
-            "default": "monthly",
-            "enum": [
-              "monthly",
-              "yearly"
-            ]
-          },
           "subTotal": {
             "type": "number"
           },
@@ -813,9 +849,21 @@
           },
           "active": {
             "type": "boolean",
-            "default": true
+            "default": false
           },
           "services": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owner": {
+            "type": "string"
+          },
+          "partner": {
+            "type": "string"
+          },
+          "invoices": {
             "type": "array",
             "items": {
               "type": "string"
@@ -824,15 +872,12 @@
           "coupon": {
             "type": "string"
           },
-          "owner": {
-            "type": "string"
-          },
-          "partner": {
-            "type": "string"
-          },
-          "expires_at": {
+          "paymentRecurrence": {
             "type": "string",
-            "format": "date-time"
+            "enum": [
+              "MONTHLY",
+              "YEARLY"
+            ]
           },
           "created_by": {
             "type": "string"

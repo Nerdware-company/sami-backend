@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_layout_client_areas",
+  "info": {
+    "name": "ClientArea",
+    "icon": "users-cog"
+  },
+  "options": {},
+  "attributes": {
+    "registerImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "loginImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

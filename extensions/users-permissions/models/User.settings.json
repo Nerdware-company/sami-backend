@@ -10,54 +10,52 @@
     "timestamps": true
   },
   "attributes": {
-    "username": {
+    "firstname": {
       "type": "string",
-      "minLength": 3,
-      "unique": true,
-      "configurable": false,
+      "minLength": 1,
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "minLength": 6,
       "required": true
     },
     "email": {
       "type": "email",
       "minLength": 6,
-      "configurable": false,
-      "required": true
+      "required": true,
+      "unique": true
     },
     "provider": {
-      "type": "string",
-      "configurable": false
+      "type": "string"
     },
     "password": {
       "type": "password",
       "minLength": 6,
-      "configurable": false,
       "private": true
     },
     "resetPasswordToken": {
       "type": "string",
-      "configurable": false,
       "private": true
     },
     "confirmationToken": {
       "type": "string",
-      "configurable": false,
       "private": true
     },
     "confirmed": {
       "type": "boolean",
       "default": false,
-      "configurable": false
+      "required": true
     },
     "blocked": {
       "type": "boolean",
-      "default": false,
-      "configurable": false
+      "default": false
     },
     "role": {
+      "configurable": true,
       "model": "role",
       "via": "users",
-      "plugin": "users-permissions",
-      "configurable": false
+      "plugin": "users-permissions"
     },
     "accountType": {
       "type": "enumeration",
@@ -83,6 +81,18 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true,
+      "minLength": 8,
+      "maxLength": 20,
+      "unique": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

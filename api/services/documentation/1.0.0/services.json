@@ -520,7 +520,8 @@
           "title",
           "monthlyPrice",
           "yearlyPrice",
-          "picture"
+          "picture",
+          "service_code"
         ],
         "properties": {
           "id": {
@@ -609,6 +610,10 @@
               }
             }
           },
+          "service_code": {
+            "type": "string",
+            "minLength": 3
+          },
           "localizations": {
             "type": "array",
             "items": {
@@ -617,7 +622,8 @@
                 "title",
                 "monthlyPrice",
                 "yearlyPrice",
-                "picture"
+                "picture",
+                "service_code"
               ],
               "properties": {
                 "id": {
@@ -636,6 +642,9 @@
                   "type": "number"
                 },
                 "picture": {
+                  "type": "string"
+                },
+                "service_code": {
                   "type": "string"
                 },
                 "localizations": {
@@ -665,7 +674,8 @@
         "required": [
           "title",
           "monthlyPrice",
-          "yearlyPrice"
+          "yearlyPrice",
+          "service_code"
         ],
         "properties": {
           "title": {
@@ -683,6 +693,10 @@
           "yearlyPrice": {
             "type": "number",
             "default": 0.01
+          },
+          "service_code": {
+            "type": "string",
+            "minLength": 3
           },
           "localizations": {
             "type": "array",

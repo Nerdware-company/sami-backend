@@ -1,0 +1,1551 @@
+{
+  "paths": {
+    "/ui-translations": {
+      "get": {
+        "deprecated": false,
+        "description": "Find all the ui-translations's records",
+        "responses": {
+          "200": {
+            "description": "Retrieve ui-translations document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ui-translations"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a single ui-translations record",
+        "responses": {
+          "200": {
+            "description": "Retrieve ui-translations document(s)",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ui-translations"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUi-translations"
+              }
+            }
+          }
+        },
+        "parameters": []
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a single ui-translations record",
+        "responses": {
+          "200": {
+            "description": "deletes a single ui-translations based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Ui-translations"
+        ],
+        "parameters": []
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Ui-translations": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "login": {
+            "type": "string"
+          },
+          "register": {
+            "type": "string"
+          },
+          "forgot_password": {
+            "type": "string"
+          },
+          "create_account": {
+            "type": "string"
+          },
+          "already_have_account": {
+            "type": "string"
+          },
+          "login_instead": {
+            "type": "string"
+          },
+          "send_email": {
+            "type": "string"
+          },
+          "change_password": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "confirm_password": {
+            "type": "string"
+          },
+          "account_type": {
+            "type": "string"
+          },
+          "new_password": {
+            "type": "string"
+          },
+          "reset_password": {
+            "type": "string"
+          },
+          "i_agree": {
+            "type": "string"
+          },
+          "privacy_policy": {
+            "type": "string"
+          },
+          "dashboard": {
+            "type": "string"
+          },
+          "my_subscriptions": {
+            "type": "string"
+          },
+          "my_customers": {
+            "type": "string"
+          },
+          "invoices": {
+            "type": "string"
+          },
+          "support_tickets": {
+            "type": "string"
+          },
+          "knowledge_base": {
+            "type": "string"
+          },
+          "my_customers_subscriptions": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "subdomain": {
+            "type": "string"
+          },
+          "total": {
+            "type": "string"
+          },
+          "payment_recurrence": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "last_payment": {
+            "type": "string"
+          },
+          "next_payment": {
+            "type": "string"
+          },
+          "view": {
+            "type": "string"
+          },
+          "edit": {
+            "type": "string"
+          },
+          "create_new": {
+            "type": "string"
+          },
+          "invoice_number": {
+            "type": "string"
+          },
+          "subtotal": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "paid": {
+            "type": "string"
+          },
+          "pending": {
+            "type": "string"
+          },
+          "open": {
+            "type": "string"
+          },
+          "closed": {
+            "type": "string"
+          },
+          "ticket_code": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "latest_reply": {
+            "type": "string"
+          },
+          "support": {
+            "type": "string"
+          },
+          "you": {
+            "type": "string"
+          },
+          "sales": {
+            "type": "string"
+          },
+          "technical": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "number_of_users": {
+            "type": "string"
+          },
+          "order_summary": {
+            "type": "string"
+          },
+          "coupon_code": {
+            "type": "string"
+          },
+          "apply_code": {
+            "type": "string"
+          },
+          "helper_title_for_this_subscription": {
+            "type": "string"
+          },
+          "helper_subdomain_for_this_subscription": {
+            "type": "string"
+          },
+          "helper_recurrence_for_this_subscription": {
+            "type": "string"
+          },
+          "helper_number_of_users_for_this_subscription": {
+            "type": "string"
+          },
+          "billed": {
+            "type": "string"
+          },
+          "monthly": {
+            "type": "string"
+          },
+          "yearly": {
+            "type": "string"
+          },
+          "create_subscription": {
+            "type": "string"
+          },
+          "create": {
+            "type": "string"
+          },
+          "edit_subscription": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "discount": {
+            "type": "string"
+          },
+          "view_subscription": {
+            "type": "string"
+          },
+          "empty": {
+            "type": "string"
+          },
+          "view_subscriptions": {
+            "type": "string"
+          },
+          "create_ticket": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "helper_subject_for_this_ticket": {
+            "type": "string"
+          },
+          "helper_type_for_this_ticket": {
+            "type": "string"
+          },
+          "ticket": {
+            "type": "string"
+          },
+          "reply": {
+            "type": "string"
+          },
+          "attached_files": {
+            "type": "string"
+          },
+          "attach_file": {
+            "type": "string"
+          },
+          "send_reply": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "read_more": {
+            "type": "string"
+          },
+          "you_dont_have_customers": {
+            "type": "string"
+          },
+          "you_dont_have_invoices": {
+            "type": "string"
+          },
+          "you_dont_have_subscriptions": {
+            "type": "string"
+          },
+          "you_dont_have_tickets": {
+            "type": "string"
+          },
+          "ticket_closed_cant_reply": {
+            "type": "string"
+          },
+          "ticket_closed": {
+            "type": "string"
+          },
+          "payment_successful": {
+            "type": "string"
+          },
+          "thanks_for_completing_payment": {
+            "type": "string"
+          },
+          "payment_fail": {
+            "type": "string"
+          },
+          "please_try_again": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "subscription_number_fees": {
+            "type": "string"
+          },
+          "pay_subscription": {
+            "type": "string"
+          },
+          "credit_card": {
+            "type": "string"
+          },
+          "crypto_currency": {
+            "type": "string"
+          },
+          "paypal": {
+            "type": "string"
+          },
+          "bank_transfer": {
+            "type": "string"
+          },
+          "account_type_customer": {
+            "type": "string"
+          },
+          "account_type_partner": {
+            "type": "string"
+          },
+          "account_type_accountant": {
+            "type": "string"
+          },
+          "account_type_support": {
+            "type": "string"
+          },
+          "partner_code": {
+            "type": "string"
+          },
+          "please_fill_star_fields": {
+            "type": "string"
+          },
+          "please_fill_all_fields": {
+            "type": "string"
+          },
+          "my_account": {
+            "type": "string"
+          },
+          "logout": {
+            "type": "string"
+          },
+          "save_edit": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          },
+          "attention": {
+            "type": "string"
+          },
+          "you_are_blocked": {
+            "type": "string"
+          },
+          "you_are_inactive": {
+            "type": "string"
+          },
+          "please_check_credentials": {
+            "type": "string"
+          },
+          "please_check_email": {
+            "type": "string"
+          },
+          "success": {
+            "type": "string"
+          },
+          "you_received_password_reset_email": {
+            "type": "string"
+          },
+          "password_reset_success_please_login": {
+            "type": "string"
+          },
+          "you_dont_have_due_payment_subscriptions": {
+            "type": "string"
+          },
+          "you_dont_have_inactive_subscriptions": {
+            "type": "string"
+          },
+          "you_dont_have_unreplied_messages": {
+            "type": "string"
+          },
+          "due_payment_subscriptions": {
+            "type": "string"
+          },
+          "inactive_subscriptions": {
+            "type": "string"
+          },
+          "unreplied_tickets": {
+            "type": "string"
+          },
+          "ticket_number": {
+            "type": "string"
+          },
+          "edit_subscription_must_pay_immediately": {
+            "type": "string"
+          },
+          "subscribe_now": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "login": {
+                  "type": "string"
+                },
+                "register": {
+                  "type": "string"
+                },
+                "forgot_password": {
+                  "type": "string"
+                },
+                "create_account": {
+                  "type": "string"
+                },
+                "already_have_account": {
+                  "type": "string"
+                },
+                "login_instead": {
+                  "type": "string"
+                },
+                "send_email": {
+                  "type": "string"
+                },
+                "change_password": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "password": {
+                  "type": "string"
+                },
+                "phone_number": {
+                  "type": "string"
+                },
+                "confirm_password": {
+                  "type": "string"
+                },
+                "account_type": {
+                  "type": "string"
+                },
+                "new_password": {
+                  "type": "string"
+                },
+                "reset_password": {
+                  "type": "string"
+                },
+                "i_agree": {
+                  "type": "string"
+                },
+                "privacy_policy": {
+                  "type": "string"
+                },
+                "dashboard": {
+                  "type": "string"
+                },
+                "my_subscriptions": {
+                  "type": "string"
+                },
+                "my_customers": {
+                  "type": "string"
+                },
+                "invoices": {
+                  "type": "string"
+                },
+                "support_tickets": {
+                  "type": "string"
+                },
+                "knowledge_base": {
+                  "type": "string"
+                },
+                "my_customers_subscriptions": {
+                  "type": "string"
+                },
+                "owner": {
+                  "type": "string"
+                },
+                "subdomain": {
+                  "type": "string"
+                },
+                "total": {
+                  "type": "string"
+                },
+                "payment_recurrence": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "last_payment": {
+                  "type": "string"
+                },
+                "next_payment": {
+                  "type": "string"
+                },
+                "view": {
+                  "type": "string"
+                },
+                "edit": {
+                  "type": "string"
+                },
+                "create_new": {
+                  "type": "string"
+                },
+                "invoice_number": {
+                  "type": "string"
+                },
+                "subtotal": {
+                  "type": "string"
+                },
+                "period": {
+                  "type": "string"
+                },
+                "paid": {
+                  "type": "string"
+                },
+                "pending": {
+                  "type": "string"
+                },
+                "open": {
+                  "type": "string"
+                },
+                "closed": {
+                  "type": "string"
+                },
+                "ticket_code": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "latest_reply": {
+                  "type": "string"
+                },
+                "support": {
+                  "type": "string"
+                },
+                "you": {
+                  "type": "string"
+                },
+                "sales": {
+                  "type": "string"
+                },
+                "technical": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "number_of_users": {
+                  "type": "string"
+                },
+                "order_summary": {
+                  "type": "string"
+                },
+                "coupon_code": {
+                  "type": "string"
+                },
+                "apply_code": {
+                  "type": "string"
+                },
+                "helper_title_for_this_subscription": {
+                  "type": "string"
+                },
+                "helper_subdomain_for_this_subscription": {
+                  "type": "string"
+                },
+                "helper_recurrence_for_this_subscription": {
+                  "type": "string"
+                },
+                "helper_number_of_users_for_this_subscription": {
+                  "type": "string"
+                },
+                "billed": {
+                  "type": "string"
+                },
+                "monthly": {
+                  "type": "string"
+                },
+                "yearly": {
+                  "type": "string"
+                },
+                "create_subscription": {
+                  "type": "string"
+                },
+                "create": {
+                  "type": "string"
+                },
+                "edit_subscription": {
+                  "type": "string"
+                },
+                "user": {
+                  "type": "string"
+                },
+                "discount": {
+                  "type": "string"
+                },
+                "view_subscription": {
+                  "type": "string"
+                },
+                "empty": {
+                  "type": "string"
+                },
+                "view_subscriptions": {
+                  "type": "string"
+                },
+                "create_ticket": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                },
+                "helper_subject_for_this_ticket": {
+                  "type": "string"
+                },
+                "helper_type_for_this_ticket": {
+                  "type": "string"
+                },
+                "ticket": {
+                  "type": "string"
+                },
+                "reply": {
+                  "type": "string"
+                },
+                "attached_files": {
+                  "type": "string"
+                },
+                "attach_file": {
+                  "type": "string"
+                },
+                "send_reply": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "from": {
+                  "type": "string"
+                },
+                "to": {
+                  "type": "string"
+                },
+                "read_more": {
+                  "type": "string"
+                },
+                "you_dont_have_customers": {
+                  "type": "string"
+                },
+                "you_dont_have_invoices": {
+                  "type": "string"
+                },
+                "you_dont_have_subscriptions": {
+                  "type": "string"
+                },
+                "you_dont_have_tickets": {
+                  "type": "string"
+                },
+                "ticket_closed_cant_reply": {
+                  "type": "string"
+                },
+                "ticket_closed": {
+                  "type": "string"
+                },
+                "payment_successful": {
+                  "type": "string"
+                },
+                "thanks_for_completing_payment": {
+                  "type": "string"
+                },
+                "payment_fail": {
+                  "type": "string"
+                },
+                "please_try_again": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "subscription_number_fees": {
+                  "type": "string"
+                },
+                "pay_subscription": {
+                  "type": "string"
+                },
+                "credit_card": {
+                  "type": "string"
+                },
+                "crypto_currency": {
+                  "type": "string"
+                },
+                "paypal": {
+                  "type": "string"
+                },
+                "bank_transfer": {
+                  "type": "string"
+                },
+                "account_type_customer": {
+                  "type": "string"
+                },
+                "account_type_partner": {
+                  "type": "string"
+                },
+                "account_type_accountant": {
+                  "type": "string"
+                },
+                "account_type_support": {
+                  "type": "string"
+                },
+                "partner_code": {
+                  "type": "string"
+                },
+                "please_fill_star_fields": {
+                  "type": "string"
+                },
+                "please_fill_all_fields": {
+                  "type": "string"
+                },
+                "my_account": {
+                  "type": "string"
+                },
+                "logout": {
+                  "type": "string"
+                },
+                "save_edit": {
+                  "type": "string"
+                },
+                "error": {
+                  "type": "string"
+                },
+                "warning": {
+                  "type": "string"
+                },
+                "attention": {
+                  "type": "string"
+                },
+                "you_are_blocked": {
+                  "type": "string"
+                },
+                "you_are_inactive": {
+                  "type": "string"
+                },
+                "please_check_credentials": {
+                  "type": "string"
+                },
+                "please_check_email": {
+                  "type": "string"
+                },
+                "success": {
+                  "type": "string"
+                },
+                "you_received_password_reset_email": {
+                  "type": "string"
+                },
+                "password_reset_success_please_login": {
+                  "type": "string"
+                },
+                "you_dont_have_due_payment_subscriptions": {
+                  "type": "string"
+                },
+                "you_dont_have_inactive_subscriptions": {
+                  "type": "string"
+                },
+                "you_dont_have_unreplied_messages": {
+                  "type": "string"
+                },
+                "due_payment_subscriptions": {
+                  "type": "string"
+                },
+                "inactive_subscriptions": {
+                  "type": "string"
+                },
+                "unreplied_tickets": {
+                  "type": "string"
+                },
+                "ticket_number": {
+                  "type": "string"
+                },
+                "edit_subscription_must_pay_immediately": {
+                  "type": "string"
+                },
+                "subscribe_now": {
+                  "type": "string"
+                },
+                "localizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "locale": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "locale": {
+            "type": "string"
+          }
+        }
+      },
+      "NewUi-translations": {
+        "properties": {
+          "login": {
+            "type": "string"
+          },
+          "register": {
+            "type": "string"
+          },
+          "forgot_password": {
+            "type": "string"
+          },
+          "create_account": {
+            "type": "string"
+          },
+          "already_have_account": {
+            "type": "string"
+          },
+          "login_instead": {
+            "type": "string"
+          },
+          "send_email": {
+            "type": "string"
+          },
+          "change_password": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "confirm_password": {
+            "type": "string"
+          },
+          "account_type": {
+            "type": "string"
+          },
+          "new_password": {
+            "type": "string"
+          },
+          "reset_password": {
+            "type": "string"
+          },
+          "i_agree": {
+            "type": "string"
+          },
+          "privacy_policy": {
+            "type": "string"
+          },
+          "dashboard": {
+            "type": "string"
+          },
+          "my_subscriptions": {
+            "type": "string"
+          },
+          "my_customers": {
+            "type": "string"
+          },
+          "invoices": {
+            "type": "string"
+          },
+          "support_tickets": {
+            "type": "string"
+          },
+          "knowledge_base": {
+            "type": "string"
+          },
+          "my_customers_subscriptions": {
+            "type": "string"
+          },
+          "owner": {
+            "type": "string"
+          },
+          "subdomain": {
+            "type": "string"
+          },
+          "total": {
+            "type": "string"
+          },
+          "payment_recurrence": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "last_payment": {
+            "type": "string"
+          },
+          "next_payment": {
+            "type": "string"
+          },
+          "view": {
+            "type": "string"
+          },
+          "edit": {
+            "type": "string"
+          },
+          "create_new": {
+            "type": "string"
+          },
+          "invoice_number": {
+            "type": "string"
+          },
+          "subtotal": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "paid": {
+            "type": "string"
+          },
+          "pending": {
+            "type": "string"
+          },
+          "open": {
+            "type": "string"
+          },
+          "closed": {
+            "type": "string"
+          },
+          "ticket_code": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "latest_reply": {
+            "type": "string"
+          },
+          "support": {
+            "type": "string"
+          },
+          "you": {
+            "type": "string"
+          },
+          "sales": {
+            "type": "string"
+          },
+          "technical": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "number_of_users": {
+            "type": "string"
+          },
+          "order_summary": {
+            "type": "string"
+          },
+          "coupon_code": {
+            "type": "string"
+          },
+          "apply_code": {
+            "type": "string"
+          },
+          "helper_title_for_this_subscription": {
+            "type": "string"
+          },
+          "helper_subdomain_for_this_subscription": {
+            "type": "string"
+          },
+          "helper_recurrence_for_this_subscription": {
+            "type": "string"
+          },
+          "helper_number_of_users_for_this_subscription": {
+            "type": "string"
+          },
+          "billed": {
+            "type": "string"
+          },
+          "monthly": {
+            "type": "string"
+          },
+          "yearly": {
+            "type": "string"
+          },
+          "create_subscription": {
+            "type": "string"
+          },
+          "create": {
+            "type": "string"
+          },
+          "edit_subscription": {
+            "type": "string"
+          },
+          "user": {
+            "type": "string"
+          },
+          "discount": {
+            "type": "string"
+          },
+          "view_subscription": {
+            "type": "string"
+          },
+          "empty": {
+            "type": "string"
+          },
+          "view_subscriptions": {
+            "type": "string"
+          },
+          "create_ticket": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "helper_subject_for_this_ticket": {
+            "type": "string"
+          },
+          "helper_type_for_this_ticket": {
+            "type": "string"
+          },
+          "ticket": {
+            "type": "string"
+          },
+          "reply": {
+            "type": "string"
+          },
+          "attached_files": {
+            "type": "string"
+          },
+          "attach_file": {
+            "type": "string"
+          },
+          "send_reply": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "read_more": {
+            "type": "string"
+          },
+          "you_dont_have_customers": {
+            "type": "string"
+          },
+          "you_dont_have_invoices": {
+            "type": "string"
+          },
+          "you_dont_have_subscriptions": {
+            "type": "string"
+          },
+          "you_dont_have_tickets": {
+            "type": "string"
+          },
+          "ticket_closed_cant_reply": {
+            "type": "string"
+          },
+          "ticket_closed": {
+            "type": "string"
+          },
+          "payment_successful": {
+            "type": "string"
+          },
+          "thanks_for_completing_payment": {
+            "type": "string"
+          },
+          "payment_fail": {
+            "type": "string"
+          },
+          "please_try_again": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "subscription_number_fees": {
+            "type": "string"
+          },
+          "pay_subscription": {
+            "type": "string"
+          },
+          "credit_card": {
+            "type": "string"
+          },
+          "crypto_currency": {
+            "type": "string"
+          },
+          "paypal": {
+            "type": "string"
+          },
+          "bank_transfer": {
+            "type": "string"
+          },
+          "account_type_customer": {
+            "type": "string"
+          },
+          "account_type_partner": {
+            "type": "string"
+          },
+          "account_type_accountant": {
+            "type": "string"
+          },
+          "account_type_support": {
+            "type": "string"
+          },
+          "partner_code": {
+            "type": "string"
+          },
+          "please_fill_star_fields": {
+            "type": "string"
+          },
+          "please_fill_all_fields": {
+            "type": "string"
+          },
+          "my_account": {
+            "type": "string"
+          },
+          "logout": {
+            "type": "string"
+          },
+          "save_edit": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "warning": {
+            "type": "string"
+          },
+          "attention": {
+            "type": "string"
+          },
+          "you_are_blocked": {
+            "type": "string"
+          },
+          "you_are_inactive": {
+            "type": "string"
+          },
+          "please_check_credentials": {
+            "type": "string"
+          },
+          "please_check_email": {
+            "type": "string"
+          },
+          "success": {
+            "type": "string"
+          },
+          "you_received_password_reset_email": {
+            "type": "string"
+          },
+          "password_reset_success_please_login": {
+            "type": "string"
+          },
+          "you_dont_have_due_payment_subscriptions": {
+            "type": "string"
+          },
+          "you_dont_have_inactive_subscriptions": {
+            "type": "string"
+          },
+          "you_dont_have_unreplied_messages": {
+            "type": "string"
+          },
+          "due_payment_subscriptions": {
+            "type": "string"
+          },
+          "inactive_subscriptions": {
+            "type": "string"
+          },
+          "unreplied_tickets": {
+            "type": "string"
+          },
+          "ticket_number": {
+            "type": "string"
+          },
+          "edit_subscription_must_pay_immediately": {
+            "type": "string"
+          },
+          "subscribe_now": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "locale": {
+            "type": "string"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "tags": []
+}

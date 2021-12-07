@@ -21,8 +21,8 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "Technical",
-        "Sales"
+        "technical",
+        "sales"
       ]
     },
     "replies": {

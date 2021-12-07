@@ -28,15 +28,6 @@
       "min": 1,
       "default": 1
     },
-    "paymentRecurrence": {
-      "type": "enumeration",
-      "enum": [
-        "monthly",
-        "yearly"
-      ],
-      "required": true,
-      "default": "monthly"
-    },
     "subTotal": {
       "type": "decimal",
       "required": true,
@@ -54,14 +45,11 @@
     },
     "active": {
       "type": "boolean",
-      "default": true,
+      "default": false,
       "required": true
     },
     "services": {
       "collection": "services"
-    },
-    "coupon": {
-      "model": "coupons"
     },
     "owner": {
       "plugin": "users-permissions",
@@ -71,9 +59,19 @@
       "plugin": "users-permissions",
       "model": "user"
     },
-    "expires_at": {
-      "type": "datetime",
-      "required": false
+    "invoices": {
+      "via": "subscription",
+      "collection": "invoices"
+    },
+    "coupon": {
+      "type": "string"
+    },
+    "paymentRecurrence": {
+      "type": "enumeration",
+      "enum": [
+        "MONTHLY",
+        "YEARLY"
+      ]
     }
   }
 }

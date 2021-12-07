@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "subscription": {
-      "model": "subscriptions"
-    },
     "subTotal": {
       "type": "decimal"
     },
@@ -41,6 +38,13 @@
     },
     "paidDate": {
       "type": "datetime"
+    },
+    "subscription": {
+      "via": "invoices",
+      "model": "subscriptions"
+    },
+    "tap_id": {
+      "type": "string"
     }
   }
 }

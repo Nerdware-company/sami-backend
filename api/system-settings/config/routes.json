@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/system-settings",
+      "handler": "system-settings.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/system-settings",
+      "handler": "system-settings.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/system-settings",
+      "handler": "system-settings.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

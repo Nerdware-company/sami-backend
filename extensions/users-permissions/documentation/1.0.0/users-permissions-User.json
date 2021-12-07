@@ -1187,17 +1187,25 @@
       "UsersPermissionsUser": {
         "required": [
           "id",
-          "username",
+          "firstname",
+          "lastname",
           "email",
-          "accountType"
+          "confirmed",
+          "accountType",
+          "phoneNumber",
+          "active"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "username": {
+          "firstname": {
             "type": "string",
-            "minLength": 3
+            "minLength": 1
+          },
+          "lastname": {
+            "type": "string",
+            "minLength": 6
           },
           "email": {
             "type": "string",
@@ -1265,15 +1273,22 @@
           "partner": {
             "required": [
               "id",
-              "username",
+              "firstname",
+              "lastname",
               "email",
-              "accountType"
+              "confirmed",
+              "accountType",
+              "phoneNumber",
+              "active"
             ],
             "properties": {
               "id": {
                 "type": "string"
               },
-              "username": {
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
                 "type": "string"
               },
               "email": {
@@ -1314,6 +1329,12 @@
               },
               "picture": {
                 "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -1389,19 +1410,36 @@
                 "type": "string"
               }
             }
+          },
+          "phoneNumber": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 8
+          },
+          "active": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
       "NewUsersPermissionsUser": {
         "required": [
-          "username",
+          "firstname",
+          "lastname",
           "email",
-          "accountType"
+          "confirmed",
+          "accountType",
+          "phoneNumber",
+          "active"
         ],
         "properties": {
-          "username": {
+          "firstname": {
             "type": "string",
-            "minLength": 3
+            "minLength": 1
+          },
+          "lastname": {
+            "type": "string",
+            "minLength": 6
           },
           "email": {
             "type": "string",
@@ -1444,6 +1482,15 @@
           },
           "partner": {
             "type": "string"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "maxLength": 20,
+            "minLength": 8
+          },
+          "active": {
+            "type": "boolean",
+            "default": false
           },
           "created_by": {
             "type": "string"

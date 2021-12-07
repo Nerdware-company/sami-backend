@@ -527,15 +527,22 @@
             "items": {
               "required": [
                 "id",
-                "username",
+                "firstname",
+                "lastname",
                 "email",
-                "accountType"
+                "confirmed",
+                "accountType",
+                "phoneNumber",
+                "active"
               ],
               "properties": {
                 "id": {
                   "type": "string"
                 },
-                "username": {
+                "firstname": {
+                  "type": "string"
+                },
+                "lastname": {
                   "type": "string"
                 },
                 "email": {
@@ -576,6 +583,12 @@
                 },
                 "picture": {
                   "type": "string"
+                },
+                "phoneNumber": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
                 },
                 "created_by": {
                   "type": "string"

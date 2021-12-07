@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "system_settings",
+  "info": {
+    "name": "System Settings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pricing_user_month": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    },
+    "pricing_user_year": {
+      "type": "decimal",
+      "required": true,
+      "min": 0.01
+    }
+  }
+}

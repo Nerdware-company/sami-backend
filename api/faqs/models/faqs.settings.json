@@ -35,16 +35,6 @@
           "localized": true
         }
       }
-    },
-    "ftag": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "elements.ftag"
     }
   }
 }

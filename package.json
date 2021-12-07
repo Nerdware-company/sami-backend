@@ -12,6 +12,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@strapi/provider-email-sendgrid": "^4.0.0",
     "@tinymce/tinymce-react": "^3.13.0",
     "knex": "0.21.18",
     "pg": "^8.7.1",
@@ -27,6 +28,7 @@
     "strapi-plugin-i18n": "3.6.8",
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-provider-email-sendgrid": "^3.6.8",
     "strapi-provider-upload-google-cloud-storage": "^3.6.8",
     "strapi-utils": "3.6.8"
   },
