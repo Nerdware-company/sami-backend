@@ -9,6 +9,10 @@ module.exports = {
   find: (ctx) => {
     return strapi
       .query("invoices")
-      .find(ctx.query, ["subscription.owner", "subscription.partner"]);
+      .find(ctx.query, [
+        "subscription.owner",
+        "subscription.partner",
+        "coupon",
+      ]);
   },
 };

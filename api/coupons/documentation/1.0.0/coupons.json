@@ -517,7 +517,6 @@
       "Coupons": {
         "required": [
           "id",
-          "discountPercentage",
           "active",
           "code"
         ],
@@ -541,12 +540,95 @@
           "validUntil": {
             "type": "string",
             "format": "date-time"
+          },
+          "fixedPrice": {
+            "type": "number"
+          },
+          "couponType": {
+            "type": "string",
+            "enum": [
+              "discount",
+              "fixed"
+            ]
+          },
+          "user": {
+            "required": [
+              "id",
+              "firstname",
+              "lastname",
+              "email",
+              "confirmed",
+              "accountType",
+              "phoneNumber",
+              "active"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "accountType": {
+                "type": "string",
+                "enum": [
+                  "customer",
+                  "partner",
+                  "accountant",
+                  "support"
+                ]
+              },
+              "partner": {
+                "type": "string"
+              },
+              "picture": {
+                "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewCoupons": {
         "required": [
-          "discountPercentage",
           "active",
           "code"
         ],
@@ -567,6 +649,19 @@
           "validUntil": {
             "type": "string",
             "format": "date-time"
+          },
+          "fixedPrice": {
+            "type": "number"
+          },
+          "couponType": {
+            "type": "string",
+            "enum": [
+              "discount",
+              "fixed"
+            ]
+          },
+          "user": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"

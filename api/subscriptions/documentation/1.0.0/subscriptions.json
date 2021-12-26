@@ -546,9 +546,6 @@
           "total": {
             "type": "number"
           },
-          "discount": {
-            "type": "integer"
-          },
           "active": {
             "type": "boolean",
             "default": false
@@ -768,9 +765,6 @@
                 "total": {
                   "type": "number"
                 },
-                "discount": {
-                  "type": "integer"
-                },
                 "status": {
                   "type": "string",
                   "enum": [
@@ -795,6 +789,9 @@
                 "tap_id": {
                   "type": "string"
                 },
+                "coupon": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -803,9 +800,6 @@
                 }
               }
             }
-          },
-          "coupon": {
-            "type": "string"
           },
           "paymentRecurrence": {
             "type": "string",
@@ -844,9 +838,6 @@
           "total": {
             "type": "number"
           },
-          "discount": {
-            "type": "integer"
-          },
           "active": {
             "type": "boolean",
             "default": false
@@ -868,9 +859,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "coupon": {
-            "type": "string"
           },
           "paymentRecurrence": {
             "type": "string",

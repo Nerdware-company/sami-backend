@@ -528,9 +528,6 @@
           "total": {
             "type": "number"
           },
-          "discount": {
-            "type": "integer"
-          },
           "status": {
             "type": "string",
             "enum": [
@@ -579,9 +576,6 @@
               "total": {
                 "type": "number"
               },
-              "discount": {
-                "type": "integer"
-              },
               "active": {
                 "type": "boolean"
               },
@@ -603,9 +597,6 @@
                   "type": "string"
                 }
               },
-              "coupon": {
-                "type": "string"
-              },
               "paymentRecurrence": {
                 "type": "string",
                 "enum": [
@@ -623,6 +614,49 @@
           },
           "tap_id": {
             "type": "string"
+          },
+          "coupon": {
+            "required": [
+              "id",
+              "active",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "discountPercentage": {
+                "type": "integer"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "code": {
+                "type": "string"
+              },
+              "validUntil": {
+                "type": "string"
+              },
+              "fixedPrice": {
+                "type": "number"
+              },
+              "couponType": {
+                "type": "string",
+                "enum": [
+                  "discount",
+                  "fixed"
+                ]
+              },
+              "user": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -633,9 +667,6 @@
           },
           "total": {
             "type": "number"
-          },
-          "discount": {
-            "type": "integer"
           },
           "status": {
             "type": "string",
@@ -660,6 +691,9 @@
             "type": "string"
           },
           "tap_id": {
+            "type": "string"
+          },
+          "coupon": {
             "type": "string"
           },
           "created_by": {

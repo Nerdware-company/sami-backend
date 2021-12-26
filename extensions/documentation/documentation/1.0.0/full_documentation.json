@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "12/07/2021 6:10:35 PM"
+    "x-generation-date": "12/26/2021 5:57:08 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7820,7 +7820,6 @@
       "Coupons": {
         "required": [
           "id",
-          "discountPercentage",
           "active",
           "code"
         ],
@@ -7844,12 +7843,95 @@
           "validUntil": {
             "type": "string",
             "format": "date-time"
+          },
+          "fixedPrice": {
+            "type": "number"
+          },
+          "couponType": {
+            "type": "string",
+            "enum": [
+              "discount",
+              "fixed"
+            ]
+          },
+          "user": {
+            "required": [
+              "id",
+              "firstname",
+              "lastname",
+              "email",
+              "confirmed",
+              "accountType",
+              "phoneNumber",
+              "active"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "firstname": {
+                "type": "string"
+              },
+              "lastname": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmationToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "accountType": {
+                "type": "string",
+                "enum": [
+                  "customer",
+                  "partner",
+                  "accountant",
+                  "support"
+                ]
+              },
+              "partner": {
+                "type": "string"
+              },
+              "picture": {
+                "type": "string"
+              },
+              "phoneNumber": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewCoupons": {
         "required": [
-          "discountPercentage",
           "active",
           "code"
         ],
@@ -7870,6 +7952,19 @@
           "validUntil": {
             "type": "string",
             "format": "date-time"
+          },
+          "fixedPrice": {
+            "type": "number"
+          },
+          "couponType": {
+            "type": "string",
+            "enum": [
+              "discount",
+              "fixed"
+            ]
+          },
+          "user": {
+            "type": "string"
           },
           "created_by": {
             "type": "string"
@@ -9494,9 +9589,6 @@
           "total": {
             "type": "number"
           },
-          "discount": {
-            "type": "integer"
-          },
           "status": {
             "type": "string",
             "enum": [
@@ -9545,9 +9637,6 @@
               "total": {
                 "type": "number"
               },
-              "discount": {
-                "type": "integer"
-              },
               "active": {
                 "type": "boolean"
               },
@@ -9569,9 +9658,6 @@
                   "type": "string"
                 }
               },
-              "coupon": {
-                "type": "string"
-              },
               "paymentRecurrence": {
                 "type": "string",
                 "enum": [
@@ -9589,6 +9675,49 @@
           },
           "tap_id": {
             "type": "string"
+          },
+          "coupon": {
+            "required": [
+              "id",
+              "active",
+              "code"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "discountPercentage": {
+                "type": "integer"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "code": {
+                "type": "string"
+              },
+              "validUntil": {
+                "type": "string"
+              },
+              "fixedPrice": {
+                "type": "number"
+              },
+              "couponType": {
+                "type": "string",
+                "enum": [
+                  "discount",
+                  "fixed"
+                ]
+              },
+              "user": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -9599,9 +9728,6 @@
           },
           "total": {
             "type": "number"
-          },
-          "discount": {
-            "type": "integer"
           },
           "status": {
             "type": "string",
@@ -9626,6 +9752,9 @@
             "type": "string"
           },
           "tap_id": {
+            "type": "string"
+          },
+          "coupon": {
             "type": "string"
           },
           "created_by": {
@@ -13311,9 +13440,6 @@
           "total": {
             "type": "number"
           },
-          "discount": {
-            "type": "integer"
-          },
           "active": {
             "type": "boolean",
             "default": false
@@ -13533,9 +13659,6 @@
                 "total": {
                   "type": "number"
                 },
-                "discount": {
-                  "type": "integer"
-                },
                 "status": {
                   "type": "string",
                   "enum": [
@@ -13560,6 +13683,9 @@
                 "tap_id": {
                   "type": "string"
                 },
+                "coupon": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -13568,9 +13694,6 @@
                 }
               }
             }
-          },
-          "coupon": {
-            "type": "string"
           },
           "paymentRecurrence": {
             "type": "string",
@@ -13609,9 +13732,6 @@
           "total": {
             "type": "number"
           },
-          "discount": {
-            "type": "integer"
-          },
           "active": {
             "type": "boolean",
             "default": false
@@ -13633,9 +13753,6 @@
             "items": {
               "type": "string"
             }
-          },
-          "coupon": {
-            "type": "string"
           },
           "paymentRecurrence": {
             "type": "string",

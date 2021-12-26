@@ -18,23 +18,13 @@
     "total": {
       "type": "decimal"
     },
-    "discount": {
-      "type": "integer"
-    },
     "status": {
       "type": "enumeration",
-      "enum": [
-        "pending",
-        "paid"
-      ]
+      "enum": ["pending", "paid"]
     },
     "paymentType": {
       "type": "enumeration",
-      "enum": [
-        "creditcard",
-        "cryptocurrency",
-        "banktransfer"
-      ]
+      "enum": ["creditcard", "cryptocurrency", "banktransfer"]
     },
     "paidDate": {
       "type": "datetime"
@@ -45,6 +35,9 @@
     },
     "tap_id": {
       "type": "string"
+    },
+    "coupon": {
+      "model": "coupons"
     }
   }
 }

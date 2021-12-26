@@ -38,11 +38,6 @@
       "required": true,
       "min": 0.01
     },
-    "discount": {
-      "type": "integer",
-      "required": false,
-      "min": 1
-    },
     "active": {
       "type": "boolean",
       "default": false,
@@ -62,9 +57,6 @@
     "invoices": {
       "via": "subscription",
       "collection": "invoices"
-    },
-    "coupon": {
-      "type": "string"
     },
     "paymentRecurrence": {
       "type": "enumeration",
